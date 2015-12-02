@@ -1,0 +1,60 @@
+﻿生成启动时间为 2015/11/10 19:35:45。
+     1>项目“D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\lib\libmosquitto.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“libmosquitto.dir\MinSizeRel\libmosquitto.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“libmosquitto.dir\MinSizeRel\libmosquitto.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       CustomBuild:
+         Building Custom Rule D:/project_VC/mosquitto/mosquitto-linux/lib/CMakeLists.txt
+         CMake does not need to re-run because D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\lib\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\project_VC\mosquitto\mosquitto-linux" /I"D:\project_VC\mosquitto\mosquitto-linux\lib" /nologo /W3 /WX- /O1 /Ob1 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D CMAKE /D "VERSION=\"1.4.4\"" /D "TIMESTAMP=\"2015/11/10 19:27:53.55\"" /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D WITH_SOCKS /D "CMAKE_INTDIR=\"MinSizeRel\"" /D libmosquitto_EXPORTS /D _WINDLL /D _MBCS /Gm- /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"libmosquitto.dir\MinSizeRel\\" /Fd"libmosquitto.dir\MinSizeRel\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\lib\logging_mosq.c ..\..\lib\memory_mosq.c ..\..\lib\messages_mosq.c ..\..\lib\mosquitto.c ..\..\lib\net_mosq.c ..\..\lib\read_handle.c ..\..\lib\read_handle_client.c ..\..\lib\read_handle_shared.c ..\..\lib\send_client_mosq.c ..\..\lib\send_mosq.c ..\..\lib\socks_mosq.c ..\..\lib\srv_mosq.c ..\..\lib\thread_mosq.c ..\..\lib\time_mosq.c ..\..\lib\tls_mosq.c ..\..\lib\util_mosq.c ..\..\lib\will_mosq.c
+         logging_mosq.c
+         memory_mosq.c
+         messages_mosq.c
+         mosquitto.c
+     1>..\..\lib\mosquitto.c(892): warning C4018: “>”: 有符号/无符号不匹配
+         net_mosq.c
+         read_handle.c
+         read_handle_client.c
+         read_handle_shared.c
+         send_client_mosq.c
+         send_mosq.c
+         socks_mosq.c
+         srv_mosq.c
+         thread_mosq.c
+         time_mosq.c
+         tls_mosq.c
+         util_mosq.c
+         will_mosq.c
+         正在生成代码...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\Out\mosquitto.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:/project_VC/mosquitto/mosquitto-linux/lib" /LIBPATH:"D:/project_VC/mosquitto/mosquitto-linux/lib/MinSizeRel" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ws2_32.lib /MANIFEST /ManifestFile:"libmosquitto.dir\MinSizeRel\mosquitto.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/MinSizeRel/mosquitto.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/MinSizeRel/mosquitto.lib" /MACHINE:X86 /DLL libmosquitto.dir\MinSizeRel\logging_mosq.obj
+         libmosquitto.dir\MinSizeRel\memory_mosq.obj
+         libmosquitto.dir\MinSizeRel\messages_mosq.obj
+         libmosquitto.dir\MinSizeRel\mosquitto.obj
+         libmosquitto.dir\MinSizeRel\net_mosq.obj
+         libmosquitto.dir\MinSizeRel\read_handle.obj
+         libmosquitto.dir\MinSizeRel\read_handle_client.obj
+         libmosquitto.dir\MinSizeRel\read_handle_shared.obj
+         libmosquitto.dir\MinSizeRel\send_client_mosq.obj
+         libmosquitto.dir\MinSizeRel\send_mosq.obj
+         libmosquitto.dir\MinSizeRel\socks_mosq.obj
+         libmosquitto.dir\MinSizeRel\srv_mosq.obj
+         libmosquitto.dir\MinSizeRel\thread_mosq.obj
+         libmosquitto.dir\MinSizeRel\time_mosq.obj
+         libmosquitto.dir\MinSizeRel\tls_mosq.obj
+         libmosquitto.dir\MinSizeRel\util_mosq.obj
+         libmosquitto.dir\MinSizeRel\will_mosq.obj  /machine:X86 
+            正在创建库 D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/MinSizeRel/mosquitto.lib 和对象 D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/MinSizeRel/mosquitto.exp
+         libmosquitto.vcxproj -> D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\Out\mosquitto.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\Out\mosquitto.dll;#2" /manifest libmosquitto.dir\MinSizeRel\mosquitto.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“libmosquitto.dir\MinSizeRel\libmosquitto.unsuccessfulbuild”。
+         正在对“libmosquitto.dir\MinSizeRel\libmosquitto.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\lib\libmosquitto.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.15

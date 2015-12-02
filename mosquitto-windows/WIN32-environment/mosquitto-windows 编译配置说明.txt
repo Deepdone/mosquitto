@@ -1,0 +1,72 @@
+编译电脑：win7，64bit，8G的内存 
+参考：http://www.mamicode.com/info-detail-636110.html
+
+1. 下载安装 vs2010
+	
+2. 源码/编译工具/环境库
+	mosquitto http://mosquitto.org/download/ mosquitto-1.4.4.tar.gz
+	
+	cmake http://www.cmake.org/download/  cmake-3.3.2-win32-x86.exe
+	
+	c-ares http://c-ares.haxx.se/  c-ares-1.10.0.tar.gz 
+	（可选）pthreads ftp://sourceware.org/pub/pthreads-win32  2.9.1，pthreads-w32-2-9-1-release.zip
+	（可选）openssl http://www.heise.de/download/win32-openssl-d4a3a8531bf11a5a85665cafc7afe82c-1447136721-2647316.html  win64openssl-1_0_2d.exe  
+	（可选）libwebsocket http://git.warmcat.com/cgi-bin/cgit/libwebsockets/ 1.4，libwebsockets-1.5-chrome47-firefox41.tar.gz 
+	
+3. 安装库
+	安装文件，源码文件都放在C:\Application\ 
+	1）安装vs2010，完全安装，减少其他因素的影响。 
+	2）解压c-ares，路径为C:\application\c-ares-1.10.0 
+	3）解压pthreads，
+		Pre-built.2里include的文件复制到 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include 
+		Pre-built.2里lib的文件复制到C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib 
+	4）安装openssl，路径为C:\OpenSSL-Win32 
+	5）安装cmake，在开始菜单生成了cmake-gui.exe程序。 
+	6）解压libwebsocket，这是源码来的，需要vs2010编译
+		打开cmake-gui
+		<1>选择源码
+		<2>选择输出路径
+		<3>配置 ---弹出个对话框，选择Visual Studio 10 2010即可，不要选择64bit，切记。
+		<4>生成工程
+		在C:\build-websocket就生成了vs的工程，找到libwebsockets.sln，双击打开
+		<1>选择生成版本为MinSizeRel,最小输出
+		<2>生成解决方案
+		生成了比较重要的东西，后面要用到： 
+		C:\build-websocket\bin\MinSizeRel libeay32.dll ssleay32.dll websockets.dll 
+		C:\build-websocket\lib\MinSizeRel websockets.lib ZLIB.lib
+	7）解压mosquitto，路径为C:\application\mosquitto-1.4.2
+	
+4. 准备编译mosquitto
+	打开cmake-gui
+	（1）选择源码
+	（2）选择输出路径
+	（3）配置 ---弹出个对话框，选择Visual Studio 10 2010即可，不要选择64bit，切记。
+	配置结束后会出现c-ares找不到 --- 手动配置 c-ares 路径。
+	（4）再次配置
+	（5）生成
+	
+	在输出目录，用vs2010打开mosquitto.sln，在“输出”窗口发现好多错误
+	问题原因：工程文件里面日期字符串的星期几导致的。于是把上面提到的文件里的乱码删掉，即把“周几”删掉，
+	mosquittopp.vcxproj文件中 报错，名称不能以“>”字符(十六进制值 0x3E)开头。后面还有几处类似改法。
+	重新打开mosquitto.sln，项目右键开始生成。
+	
+	libwebsockcets相关问题错误表示 libwebsockcets的函数找不到。
+	在解决方案资源管理器中找到mosquitto，右键，属性。
+	在打开的mosquitto属性页里，依次打开配置属性，链接器，输入，附加依赖性，把websockets.lib改成正确的lib文件路径。
+	最后再项目右键重新编译一下。
+	如果遇到无法打开mosquitto.lib，表明某个子工程需要依赖libmosquitto这个工程，在子工程右键“项目依赖项”里面勾上libmosquitto就可以了。
+	如果遇到一堆红色的错误，无法解析外部符号，就表明某些库没有引用，就要在附加依赖性添加对应的lib。或者复制到 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib
+	如果遇到缺少某个.h头文件的，需要把对应的头文件复制到C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include
+	
+	主程序有： 
+	mosquitto.exe 
+	（可选）mosquitto_passwd.exe
+	mosquitto_sub.exe
+	mosquitto_pub.exe 
+	如果提示提示缺少websockets.lib
+	复制websockets.lib -> 程序目录
+	再把需要的文件搬过来，如下 
+	mosquitto.conf ->  
+	libeay32.dll -> 
+	ssleay32.dll -> 
+	pthreadVC2.dll ->

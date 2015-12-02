@@ -1,0 +1,7 @@
+D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/client/CMakeFiles/mosquitto_sub.dir
+D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/CMakeFiles/libmosquitto.dir
+D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/cpp/CMakeFiles/mosquittopp.dir
+D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/src/CMakeFiles/mosquitto.dir
+D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/CMakeFiles/ALL_BUILD.dir
+D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/client/CMakeFiles/mosquitto_pub.dir
+D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/CMakeFiles/ZERO_CHECK.dir

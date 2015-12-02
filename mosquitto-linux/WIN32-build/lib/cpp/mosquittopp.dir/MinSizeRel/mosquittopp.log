@@ -1,0 +1,26 @@
+﻿生成启动时间为 2015/11/10 19:35:48。
+     1>项目“D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\lib\cpp\mosquittopp.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“mosquittopp.dir\MinSizeRel\mosquittopp.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“mosquittopp.dir\MinSizeRel\mosquittopp.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       CustomBuild:
+         Building Custom Rule D:/project_VC/mosquitto/mosquitto-linux/lib/cpp/CMakeLists.txt
+         CMake does not need to re-run because D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\lib\cpp\CMakeFiles\generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\project_VC\mosquitto\mosquitto-linux\lib" /I"D:\project_VC\mosquitto\mosquitto-linux\lib\cpp" /nologo /W3 /WX- /O1 /Ob1 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D CMAKE /D "VERSION=\"1.4.4\"" /D "TIMESTAMP=\"2015/11/10 19:27:53.55\"" /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D WITH_SOCKS /D "CMAKE_INTDIR=\"MinSizeRel\"" /D mosquittopp_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"mosquittopp.dir\MinSizeRel\\" /Fd"mosquittopp.dir\MinSizeRel\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\lib\cpp\mosquittopp.cpp
+         mosquittopp.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\Out\mosquittopp.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib" /LIBPATH:"D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/MinSizeRel" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib ..\MinSizeRel\mosquitto.lib ws2_32.lib /MANIFEST /ManifestFile:"mosquittopp.dir\MinSizeRel\mosquittopp.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/cpp/MinSizeRel/mosquittopp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/cpp/MinSizeRel/mosquittopp.lib" /MACHINE:X86 /DLL mosquittopp.dir\MinSizeRel\mosquittopp.obj  /machine:X86 
+            正在创建库 D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/cpp/MinSizeRel/mosquittopp.lib 和对象 D:/project_VC/mosquitto/mosquitto-linux/WIN32-build/lib/cpp/MinSizeRel/mosquittopp.exp
+         mosquittopp.vcxproj -> D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\Out\mosquittopp.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\Out\mosquittopp.dll;#2" /manifest mosquittopp.dir\MinSizeRel\mosquittopp.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“mosquittopp.dir\MinSizeRel\mosquittopp.unsuccessfulbuild”。
+         正在对“mosquittopp.dir\MinSizeRel\mosquittopp.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\project_VC\mosquitto\mosquitto-linux\WIN32-build\lib\cpp\mosquittopp.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.31
